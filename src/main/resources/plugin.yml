@@ -1,0 +1,4 @@
+name: EasyKarma
+version: '1.0.0-BETA'
+main: org.legion.easyKarma.EasyKarma
+api-version: '1.20'
