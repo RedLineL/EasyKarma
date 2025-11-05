@@ -1,7 +1,7 @@
 name: EasyKarma
 version: '1.0.0-BETA'
 main: org.legion.easyKarma.EasyKarma
-description: "A Karma Minecraft plugin"
+description: "A Karma Minecraft plugin."
 api-version: '1.20'
 
 commands:
