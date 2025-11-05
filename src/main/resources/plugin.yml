@@ -6,7 +6,7 @@ api-version: '1.20'
 
 commands:
   karma:
-    description: "Main command"
+    description: "Main karma command"
     usage: "/karma <args>"
     permission: easykarma.admin
 permissions:
