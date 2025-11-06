@@ -8,7 +8,6 @@ commands:
   karma:
     description: Main karma command
     usage: /karma <args>
-    permission: easykarma.admin
 permissions:
   easykarma.admin:
     description: Allows players to use karma commands.

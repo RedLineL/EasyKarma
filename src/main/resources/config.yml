@@ -1,0 +1,100 @@
+# ╔══════════════════════════════════╗
+# ║         ⚖️ EasyKarma ⚖️          ║
+# ╚══════════════════════════════════╝
+# Main configuration for the EasyKarma plugin by @Relinel
+
+config:
+  mob:
+    # How much karma is gained/lost for killing specific mobs
+    ZOMBIE: 2
+    SKELETON: 3
+    CREEPER: 5
+    SPIDER: 2
+    ENDERMAN: 4
+    WITCH: 6
+    PILLAGER: 4
+    VINDICATOR: 5
+    EVOKER: 7
+    WITHER_SKELETON: 6
+    PHANTOM: 3
+    DROWNED: 2
+    HUSK: 2
+    STRAY: 2
+    GUARDIAN: 3
+    ELDER_GUARDIAN: 7
+    VILLAGER: -10
+    IRON_GOLEM: -8
+    SNOW_GOLEM: -6
+    WANDERING_TRADER: -8
+    PIG: -2
+    COW: -2
+    SHEEP: -2
+    CHICKEN: -2
+    HORSE: -3
+    CAT: -4
+    DOG: -4
+    BEE: -3
+    AXOLOTL: -5
+    TURTLE: -5
+    FOX: -4
+    PARROT: -5
+    WOLF: 0
+    LLAMA: 0
+    PANDA: 0
+    GOAT: 0
+
+  values:
+    # How much karma is gained/lost for each action
+    kill-player: -5
+    kill-mob: -1
+    help-player: 3
+    trade: 1
+
+  # Effects when karma is positive
+  positive-effects:
+    damage-bonus-per-point: 0.002   # +0.2% extra damage per karma point
+    save-chance: 0.15              # 15% chance to survive fatal hit
+
+  # Effects when karma is negative
+  negative-effects:
+    lightning-chance: 0.001        # Chance per tick to summon lightning
+    mob-aggro-chance: 0.3          # 30% more likely to be targeted
+
+  # How much karma is needed for the effect to start
+  start-effects:
+    lightning: -10
+    mob-aggro-multiplier: -5
+
+messages:
+  prefix: "&8[&eKarma&8]&r "
+
+  # Player info messages
+  karma-view: "%prefix%Your current karma: &e%karma%"
+  karma-view-other: "%prefix%&e%player%'s &fkarma: &a%karma%"
+
+  # Changes in karma
+  karma-gain: "%prefix%You gained &a%amount% &fkarma!"
+  karma-loss: "%prefix%You lost &c%amount% &fkarma!"
+
+  # Admin messages
+  admin-give: "%prefix%You have given &a%amount% &fkarma to &e%player%."
+  admin-take: "%prefix%You have removed &c%amount% &fkarma from &e%player%."
+  admin-set: "%prefix%You have set &e%player%'s &fkarma to &a%amount%."
+
+  # Player notification about admin actions
+  you-got-karma: "%prefix%An admin gave you &a%amount% &fkarma!"
+  you-lost-karma: "%prefix%An admin removed &c%amount% &fkarma from you!"
+  you-karma-set: "%prefix%Your karma was set to &e%amount%."
+
+  # Effect messages
+  saved-by-karma: "%prefix%&aYour good karma saved you from death!"
+  lightning-strike: "%prefix%&cDark energy strikes you for your evil deeds..."
+
+  # Errors and system
+  not-enough-permission: "%prefix%&cYou don't have permission to do that!"
+  reload: "%prefix%&aConfig successfully reloaded."
+  player-not-found: "%prefix%&cPlayer &e%player% &cnot found!"
+  only-player: "%prefix%&cOnly players can use this command!"
+  usage: "%prefix%&7Usage: &e/karma <give|take|set|info|reload> [player] [amount]"
+  invalid-number: "%prefix%&cAmount must be a valid number!"
+  unknown-action: "%prefix%&cUnknown action. Use: give, take, set, info"
